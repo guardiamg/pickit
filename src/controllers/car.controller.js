@@ -57,6 +57,6 @@ export const deleteCar = async (req, res) => {
 		const deletedCar = await Car.findByIdAndUpdate(id, carActive, { new : true });
 		res.status(200).json({ ok : true, msg : 'Car deleted', deletedCar });
 	} catch(err) {
-		res.status(500).json({ ok : false, aca : 'aca', msg : err });
+		res.status(500).json({ ok : false, msg : err });
 	}
 }

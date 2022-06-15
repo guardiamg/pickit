@@ -55,6 +55,6 @@ export const deleteOwner = async (req, res) => {
 		const deletedOwner = await Owner.findByIdAndUpdate(id, ownerActive, { new : true });
 		res.status(200).json({ ok : true, msg : 'Owner deleted', deletedOwner });
 	} catch(err) {
-		res.status(500).json({ ok : false, aca : 'aca', msg : err });
+		res.status(500).json({ ok : false, msg : err });
 	}
 }

@@ -2,7 +2,7 @@ import Service from './../models/service.model';
 
 export const createServices = async () => {
 	try{
-		// db.roles.estimatedDocumentCount() is a mongosh (mongo shell) method to count the number of records in the table 
+		// db.service.estimatedDocumentCount() is a mongosh (mongo shell) method to count the number of records in the table 
 		const count = await Service.estimatedDocumentCount();
 		
 		if(count > 0) return;
